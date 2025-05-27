@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  /*- * {
+    @apply border-border;
+  } */
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+  .h1 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[20px] xl:text-[36px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[16px] xl:text-[20px] leading-[1.1] font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-shadow-accent {
+    text-shadow:
+      -1px -1px 20px #00ff99,
+      1px 5px 20px #00ff99;
+  }
+  .text-shadow-white {
+    text-shadow: 0px 2px 25px rgba(255, 255, 255, 0.8);
+  }
+  .button-shadow-accent {
+    box-shadow: 0px 2px 20px #00ff99;
+  }
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* min-height: 100%; */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+html,
+body {
+  height: auto; /* Ensure the height adjusts with content */
+  min-height: 100vh; /* Allow for overflow content */
+  margin: 0;
+  padding: 0;
+  cursor: none; /* Hide the default cursor */
+  /* overflow: hidden; */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  /* overflow: hidden; */
+  /* @apply min-h-screen max-h-screen overflow-auto */
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100;
+  mix-blend-mode: difference;
+  padding: 10px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 20px #01ffbb;
+  background-color: #01ffbb;
+}
+
+/* Custom Scrollbar Styling */
+html,
+#main-container {
+  /* height: 100vh; */
+  scrollbar-width: thin; /* For Firefox - thin scrollbar */
+  scrollbar-color: #01ffbb #282c3422; /* Thumb (green) and Track (dark background) */
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* height: 100vh; */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* For Webkit-based browsers (e.g., Chrome, Edge, Safari) */
+html::-webkit-scrollbar,
+#main-container::-webkit-scrollbar {
+  width: 5px; /* Scrollbar width */
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+#main-container::-webkit-scrollbar-thumb {
+  background: #01ffbbbb; /* Thumb color */
+  border-radius: 10px; /* Fully rounded edges */
+}
+
+html::-webkit-scrollbar-thumb:hover,
+#main-container::-webkit-scrollbar-thumb:hover {
+  background: #01ffbb; /* Lighter green for hover effect */
+}
+
+html::-webkit-scrollbar-track,
+#main-container::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Slightly lighter dark background for track */
+  border-radius: 10px; /* Matches thumb rounding for cohesive design */
+}
+
+.section {
+  /* border: 1px solid white; */
+  @apply pt-24 lg:pt-0 lg:min-h-[calc(100vh)] flex flex-col justify-center;
+}
+
+.progress-bar-left {
+  transform-origin: left;
+}
+
+.progress-bar-right {
+  transform-origin: right;
+}
+
+.circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+.aboutSubSection {
+  @apply min-h-[100vh] pt-[220px] xl:pt-[100px];
+}
+
+.custom-toast {
+  /* width: calc(100vw - 20px); */
+  margin: 20px 10px 0px 10px;
+  font-size: 16px;
+  padding: 10px 20px;
+  /* color: #193432ff; */
+  background-color: #01ffbbdd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @apply w-[calc(100vw-20px)] lg:max-w-md lg:w-full;
+}
