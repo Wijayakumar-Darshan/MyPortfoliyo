@@ -23,6 +23,13 @@ const Project = () => {
       link: "",
       git: "https://github.com/Wijayakumar-Darshan/Portfoliyo"
     },
+    {
+      title: "Movie Explorer", 
+      image: "/assets/projects/Movie.png",
+      description: "Movie Explorer is a responsive React web application that allows users to browse trending movies, view detailed movie information, and manage their favorites. Built with React, React Router, and Material UI, it integrates the TMDb API for real-time movie data. Features include user authentication, guest previews, and a clean, modern UI.",
+      link: "",
+      git: "https://github.com/Wijayakumar-Darshan/Movie-Explorer"
+    }
   ];
 
   const [isMobile, setIsMobile] = useState(false);
