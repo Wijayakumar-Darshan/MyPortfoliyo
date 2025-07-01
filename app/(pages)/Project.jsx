@@ -20,9 +20,30 @@ const Project = () => {
       title: "My Portfolio", 
       image: "/assets/projects/Portfoliyo.png",
       description: "A sleek and responsive personal portfolio built with Next.js 15, React 19, and Tailwind CSS. Showcases projects, skills, and experiences with smooth animations powered by Framer Motion.",
-      link: "",
+      link: "http://my-portfoliyo-ten.vercel.app",
       git: "https://github.com/Wijayakumar-Darshan/Portfoliyo"
     },
+    {
+      title: "Movie Explorer", 
+      image: "/assets/projects/Movie.png",
+      description: "Movie Explorer is a responsive React web application that allows users to browse trending movies, view detailed movie information, and manage their favorites. Built with React, React Router, and Material UI, it integrates the TMDb API for real-time movie data. Features include user authentication, guest previews, and a clean, modern UI.",
+      link: "",
+      git: "https://github.com/Wijayakumar-Darshan/Movie-Explorer"
+    },
+    {
+      title: "Chat App", 
+      image: "/assets/projects/ChatApp.png",
+      description: "Chat App is a responsive React web application that allows users to chat, view , and engage with their friends. Built with React, React Router, and Material UI. Features include user authentication, guest previews, and a clean, modern UI.",
+      link: "",
+      git: "https://github.com/Wijayakumar-Darshan/NewChatApp"
+    },
+    {
+      title: "StandUp", 
+      image: "/assets/projects/StandUp.png",
+      description: "StandUp is a responsive React web application that allows teachers and students can engage with the system for Sri Lankan schools. Built with React, Spring Boot, React Router, and Material UI. Features include user authentication, guest previews, and a clean, modern UI.",
+      link: "",
+      git: "https://github.com/Wijayakumar-Darshan/Exam.git"
+    }
   ];
 
   const [isMobile, setIsMobile] = useState(false);
